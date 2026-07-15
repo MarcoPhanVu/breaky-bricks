@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Nunito:wght@200&family=Poiret+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Nunito:wght@200&family=Poiret+One&display=swap");
 
 * {
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
     font-family: "Klee One";
     outline: var(--main-bg-color) !important;
 }
@@ -11,7 +12,8 @@
     --main-bg-color: #ffead0;
 }
 
-.btn:focus, a:focus{
+.btn:focus,
+a:focus {
     outline: var(--main-bg-color) !important;
 }
 
@@ -21,6 +23,7 @@ body {
 
 .container {
     width: 30%;
+    min-width: 360px;
     height: 300px;
     margin-top: 10%;
     text-align: center;
@@ -28,13 +31,13 @@ body {
     border-radius: 10px;
     position: relative;
 }
-h2{
+h2 {
     padding: 10px;
     margin-bottom: 20px;
-    color: #FF7F50;
+    color: #ff7f50;
 }
 .btn {
-    padding-top: 4%;
+    padding-top: 12px;
     position: relative;
     border: 3px solid var(--main-color);
     border-radius: 20px;
@@ -45,12 +48,15 @@ h2{
     outline: var(--main-bg-color) !important;
 }
 
-.btn.first:hover, .btn.second:hover {
-    color: #fff;}
-.btn.first:active, .btn.second:active {
+.btn.first:hover,
+.btn.second:hover {
+    color: #fff;
+}
+.btn.first:active,
+.btn.second:active {
     transition: 0.01s;
-    background-color: #FF7F50;
-    border-color: #FF7F50;
+    background-color: #ff7f50;
+    border-color: #ff7f50;
     outline: var(--main-bg-color) !important;
 }
 
@@ -61,7 +67,7 @@ h2{
     transition: 0.6s;
     outline: var(--main-bg-color) !important;
 }
-.btn.first:before {   
+.btn.first:before {
     transition: 0.5s all ease;
     position: absolute;
     border-radius: 15px;
@@ -69,7 +75,7 @@ h2{
     left: 50%;
     right: 50%;
     bottom: 0%;
-    content:"";
+    content: "";
     background-color: var(--main-color);
     outline: var(--main-bg-color) !important;
 }
@@ -82,12 +88,9 @@ h2{
 }
 .btn.first:active:before {
     transition: 0.01s;
-    background-color: #FF7F50;
+    background-color: #ff7f50;
     outline: var(--main-bg-color) !important;
 }
-
-
-
 
 /*SECOND BUTTON*/
 .btn.second {
@@ -99,7 +102,7 @@ h2{
     outline: var(--main-bg-color) !important;
 }
 
-.btn.second:before {   
+.btn.second:before {
     transition: 0.6s all ease;
     position: absolute;
     border-radius: 18px;
@@ -108,9 +111,9 @@ h2{
     right: 0%;
     bottom: 0;
     opacity: 1;
-    content:"";
+    content: "";
     background-color: var(--main-bg-color);
-    z-index:-1;
+    z-index: -1;
     outline: var(--main-bg-color) !important;
 }
 

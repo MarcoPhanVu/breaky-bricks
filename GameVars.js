@@ -19,11 +19,19 @@ var paddleLevelMaxed = false;
 var counting = 0;
 
 //Paddle Settings:
-var padLength = cvs.width*0.15;
+var padLength = cvs.width * 0.15;
 var padHeight = 20;
-var paddleX = cvs.width/2 - padLength/2;
-var paddleY = cvs.height - padHeight*2;
-var paddleColorsList = ["#272C33", "#38586C", "#708BA8"];
+var paddleX = cvs.width / 2 - padLength / 2;
+var paddleY = cvs.height - padHeight * 2;
+var paddleColorsList = [
+    "#272C33",
+    "#38586C",
+    "#708BA8",
+    "#bcd7fa",
+    "#AFCBFF",
+    "#5F749B",
+    "#0E1C36",
+];
 var paddleLevel = 1;
 var paddleSpeed = 4;
 
@@ -40,28 +48,29 @@ var ballLevel = 1;
 //Bricks Settings:
 var brickRow = 4;
 var brickCollumn = 6;
-var brickLen = cvs.width/(brickCollumn*1.3);
-var brickHei = brickLen/4;
+var brickLen = cvs.width / (brickCollumn * 1.3);
+var brickHei = brickLen / 4;
 var brickOffsetTop = 40;
 var brickColorsList = ["#078300", "#00D83B", "#38E859", "#75EB7B", "#9DFF92"];
 
 var gaps = brickCollumn + 1;
-var brickPadding = (cvs.width - (brickLen * brickCollumn))/gaps;
-console.log("Padding: " + brickPadding)
-console.log("BrickLen: " + brickLen)
-
+var brickPadding = (cvs.width - brickLen * brickCollumn) / gaps;
+console.log("Padding: " + brickPadding);
+console.log("BrickLen: " + brickLen);
 
 //Others
-function RandomFromMinToMax(min, max){
-    return Math.floor(Math.random()*(max-min)) + min;
+function RandomFromMinToMax(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 //Decide whether the ball will go left or right at the beginning.
-function InitialBallDirection(){
+function InitialBallDirection() {
     let a = Math.round(Math.random());
-    if (a == 0){//Ball turn Right
+    if (a == 0) {
+        //Ball turn Right
         return ballSpeed;
-    }else if (a == 1){//Ball turn Right
+    } else if (a == 1) {
+        //Ball turn Right
         return -ballSpeed;
     }
 }

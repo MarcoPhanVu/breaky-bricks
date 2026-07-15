@@ -1,13 +1,19 @@
-* {padding: 0; margin: 0;}
+* {
+    padding: 0;
+    margin: 0;
+}
 
 #cvs {
     display: block;
-    background-color: #E9ECF5;
+    background-color: #e9ecf5;
     margin: auto;
-    border: 2px solid #A3C3D9;
+    border: 2px solid #a3c3d9;
 }
 
-table, tr, th, td {
+table,
+tr,
+th,
+td {
     border-collapse: collapse;
     width: 250px;
     border: 1px solid black;
@@ -17,15 +23,18 @@ table, tr, th, td {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 500px;
-    max-width: 60%;
+    /* width: 500px; */
+    max-width: 80%;
     height: 400px;
-    max-height: 40%;
+    max-height: 80%;
     transform: translate(-50%, -50%) scale(0);
     background-color: rgb(186, 247, 206);
     z-index: 10;
     border: 1px solid black;
     transition: 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .modal.activate {
@@ -33,7 +42,7 @@ table, tr, th, td {
 }
 
 .modal-header {
-    padding: 15px 15px 10px 15px;
+    padding: 16px 16px 10px 16px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
@@ -50,25 +59,26 @@ table, tr, th, td {
 
 .modal-body {
     height: 50%;
-    padding-top: 25px;
-    display: flex;
+    padding-top: 24px;
+    /* display: flex; */
+    padding: 24px;
     justify-content: center;
     border-bottom: 2px solid black;
 }
- .modal-footer {
+.modal-footer {
     display: flex;
     justify-content: center;
- }
+}
 
 #overlay {
     position: fixed;
     background-color: #00000080;
     opacity: 0;
     transition: 0.2s ease-in-out;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: 9;
     pointer-events: none;
 }
